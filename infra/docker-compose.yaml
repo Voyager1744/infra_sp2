@@ -5,7 +5,7 @@ services:
     image: postgres:13.0-alpine
 
     volumes:
-      - /var/lib/postgresql/data/
+      - pgdata_value:/var/lib/postgresql/data/
     env_file:
       - ./.env
 
@@ -34,3 +34,4 @@ volumes:
   # Новые тома 
   static_value:
   media_value:
+  pgdata_value:
